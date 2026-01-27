@@ -1,0 +1,213 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.app-header h1 {
+  color: #646cff;
+  margin-bottom: 10px;
+}
+
+.app-header p {
+  color: #666;
+  font-style: italic;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Authentication Section */
+.auth-section {
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.auth-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.login-btn {
+  background-color: #646cff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.login-btn:hover {
+  background-color: #535bf2;
+}
+
+.login-status {
+  color: #28a745;
+  font-weight: 500;
+  margin: 0;
+}
+
+.note {
+  display: block;
+  margin-top: 10px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Video Section */
+.video-section {
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.video-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.get-video-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.get-video-btn:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.get-video-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+.error small {
+  display: block;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.video-player {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.video-player h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.video-player video {
+  margin: 15px 0;
+  border-radius: 6px;
+}
+
+.video-info {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e3f2fd;
+  border-radius: 4px;
+  border-left: 4px solid #2196f3;
+}
+
+/* Info Section */
+.info-section {
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+}
+
+.info-section h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.info-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.info-section li {
+  padding: 5px 0;
+  font-weight: 500;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .auth-section,
+  .video-section,
+  .info-section {
+    background-color: #2a2a2a;
+    border-color: #444;
+  }
+  
+  .auth-section h2,
+  .video-section h2,
+  .info-section h3 {
+    color: #fff;
+  }
+  
+  .video-player {
+    background-color: #333;
+    border-color: #555;
+  }
+  
+  .video-player h3 {
+    color: #fff;
+  }
+  
+  .info-section {
+    background-color: #1a1a2e;
+  }
+  
+  .video-info {
+    background-color: #1e3a8a;
+    color: #e3f2fd;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+  
+  .video-player video {
+    width: 100%;
+  }
+}
