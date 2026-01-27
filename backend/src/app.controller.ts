@@ -16,7 +16,7 @@ export class AppController {
       status: 'OK',
       timestamp: new Date().toISOString(),
       environment: process.env.NODE_ENV || 'development',
-      message: 'Azure Demo Backend API is running'
+      message: 'Azure Demo Backend API is running smoothly! Updataed v.1'
     };
   }
 }
