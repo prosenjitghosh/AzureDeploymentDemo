@@ -4,16 +4,17 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // Enable CORS for frontend development
-  // In Azure App Service, this will be configured differently
+  // Enable CORS for frontend development and production
   app.enableCors({
     origin: [
-      'http://localhost:3000', // React dev server
-      'https://localhost:3000', // HTTPS React dev server
-      // TODO: Add Azure Static Web Apps URL when deployed
-      // 'https://your-static-web-app.azurestaticapps.net'
+      'http://localhost:3000', // React dev server (local)
+      'https://localhost:3000', // HTTPS React dev server (local)
+      'https://black-ocean-0d0628c1e.4.azurestaticapps.net', // Azure Static Web Apps production
+      'https://black-ocean-0d0628c1e.4.azurestaticapps.net/' // Azure Static Web Apps (with trailing slash)
     ],
     credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
   });
 
   // Global prefix for all routes (optional)
